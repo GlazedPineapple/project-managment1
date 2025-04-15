@@ -1,233 +1,51 @@
+
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Employee Cybersecurity Questionnaire</title>
-
-    <style>
-
-        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f4f4f4; }
-
-        .container { max-width: 600px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-
-        h2 { text-align: center; }
-
-        label { font-weight: bold; }
-
-        .question { margin-bottom: 15px; }
-
-        button { background: #007bff; color: #fff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
-
-        button:hover { background: #0056b3; }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <title>Phishing Email Simulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fffbea;
+    }
+    .email-container {
+      max-width: 600px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+    }
+    .header {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .red-flag {
+      color: red;
+      font-weight: bold;
+    }
+    a.phishy-link {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-
-    <div class="container">
-
-        <h2>Employee Cybersecurity Questionnaire</h2>
-
-        <form id="cyberForm">
-
-            <div class="question">
-
-                <label>1. Have you completed cybersecurity training in the last 12 months?</label><br>
-
-                <input type="radio" name="training" value="Yes" required> Yes
-
-                <input type="radio" name="training" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>2. Do you use multi-factor authentication (MFA) for work accounts?</label><br>
-
-                <input type="radio" name="mfa" value="Yes" required> Yes
-
-                <input type="radio" name="mfa" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>3. How do you store your work passwords?</label><br>
-
-                <select name="passwords" required>
-
-                    <option value="">Select</option>
-
-                    <option value="Password Manager">Password Manager</option>
-
-                    <option value="Written Down">Written Down</option>
-
-                    <option value="Saved in Browser">Saved in Browser</option>
-
-                    <option value="Memorized">Memorized</option>
-
-                </select>
-
-            </div>
-
-            <div class="question">
-
-                <label>4. Have you ever reported a phishing email to IT?</label><br>
-
-                <input type="radio" name="phishing" value="Yes" required> Yes
-
-                <input type="radio" name="phishing" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>5. Do you regularly update your computer and software?</label><br>
-
-                <input type="radio" name="updates" value="Yes" required> Yes
-
-                <input type="radio" name="updates" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>6. How often do you change your passwords?</label><br>
-
-                <select name="change_passwords" required>
-
-                    <option value="">Select</option>
-
-                    <option value="Every 3 months">Every 3 months</option>
-
-                    <option value="Every 6 months">Every 6 months</option>
-
-                    <option value="Once a year">Once a year</option>
-
-                    <option value="Never">Never</option>
-
-                </select>
-
-            </div>
-
-            <div class="question">
-
-                <label>7. Do you know how to identify a secure website (e.g., HTTPS, padlock icon)?</label><br>
-
-                <input type="radio" name="secure_website" value="Yes" required> Yes
-
-                <input type="radio" name="secure_website" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>8. Have you ever clicked on a suspicious link or attachment by mistake?</label><br>
-
-                <input type="radio" name="clicked_link" value="Yes" required> Yes
-
-                <input type="radio" name="clicked_link" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>9. When working remotely, do you use a secure VPN connection?</label><br>
-
-                <input type="radio" name="vpn" value="Yes" required> Yes
-
-                <input type="radio" name="vpn" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>10. What should you do if you suspect a cyber attack?</label><br>
-
-                <select name="cyber_attack" required>
-
-                    <option value="">Select</option>
-
-                    <option value="Ignore it">Ignore it</option>
-
-                    <option value="Report it to IT/Security">Report it to IT/Security</option>
-
-                    <option value="Try to fix it yourself">Try to fix it yourself</option>
-
-                </select>
-
-            </div>
-
-            <div class="question">
-
-                <label>11. Do you lock your screen when stepping away from your device?</label><br>
-
-                <input type="radio" name="lock_screen" value="Yes" required> Yes
-
-                <input type="radio" name="lock_screen" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>12. Are you aware of your organization's cybersecurity policies?</label><br>
-
-                <input type="radio" name="policy_awareness" value="Yes" required> Yes
-
-                <input type="radio" name="policy_awareness" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>13. Do you recognize signs of social engineering tactics?</label><br>
-
-                <input type="radio" name="social_engineering" value="Yes" required> Yes
-
-                <input type="radio" name="social_engineering" value="No"> No
-
-            </div>
-
-            <div class="question">
-
-                <label>14. Do you use unique passwords for each of your work accounts?</label><br>
-
-                <input type="radio" name="unique_passwords" value="Yes" required> Yes
-
-                <input type="radio" name="unique_passwords" value="No"> No
-
-            </div>
-
-            <button type="submit">Submit</button>
-
-        </form>
-
-    </div>
-
- 
-
-    <script>
-
-        document.getElementById("cyberForm").addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            alert("Thank you for completing the employee cybersecurity questionnaire!");
-
-        });
-
-    </script>
-
+  <div class="email-container">
+    <div class="header">From: IT Support &lt;it-support@secure-company-login.com&gt;</div>
+    <div class="header">Subject: Urgent Action Required - Account Verification</div>
+    <p>Dear User,</p>
+    <p>We noticed unusual activity in your account and need you to verify your identity <span class="red-flag">immediately</span>.</p>
+    <p>Please click the secure link below to log in and confirm your information:</p>
+    <p>
+      <a href="http://secure-login-update.com/verify" class="phishy-link">http://secure-login-update.com/verify</a>
+    </p>
+    <p class="red-flag">Failure to act within 24 hours may result in account suspension.</p>
+    <p>Thank you,</p>
+    <p>IT Help Desk</p>
+  </div>
 </body>
-
 </html>
 
- 
+
